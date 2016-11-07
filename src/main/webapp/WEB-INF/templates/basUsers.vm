@@ -1,0 +1,16 @@
+#if(${basUserCount} > 0)
+	该医院有工作人员共 ${basUserCount} 名<br>
+	#if(${basUsers})
+		#foreach(${basUser} in ${basUsers})
+			#if(${basUser.name})
+				${basUser.name}<br>
+			#else
+			no data
+			#end
+
+		#end
+	#else
+	没有数据
+	#end
+#end
+
